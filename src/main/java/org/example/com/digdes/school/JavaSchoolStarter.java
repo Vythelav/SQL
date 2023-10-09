@@ -4,7 +4,7 @@ import java.util.*;
 
 public class JavaSchoolStarter {
     Scanner cr = new Scanner(System.in);
-    List<Map<String, Object>> data;
+    List<Map<String, Object>> data = new ArrayList<>();
 
     public JavaSchoolStarter() {
 
@@ -18,9 +18,9 @@ public class JavaSchoolStarter {
         return new ArrayList<>();
     }
 
-    private void readOrder(String request) {
+    public void readOrder(String request) {
         if (request.startsWith("INSERT")) {
-            insertValues();
+            insertValues(request);
         } else if (request.startsWith("UPDATE")) {
             updateValues();
         } else if (request.startsWith("DELETE")) {
@@ -42,7 +42,7 @@ public class JavaSchoolStarter {
 
     }
 
-    private void insertValues() {
+    private void insertValues(String request) {
 
     }
 }
