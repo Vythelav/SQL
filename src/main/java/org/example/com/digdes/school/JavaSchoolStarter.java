@@ -31,14 +31,38 @@ public class JavaSchoolStarter {
         } else if (request.startsWith("UPDATE")) {
             updateValues();
         } else if (request.startsWith("DELETE")) {
-            deleteValues();
+            String updatedRequest = updateRequest(request);
+            insertValues(updatedRequest);
+            deleteValues(updatedRequest);
         } else if (request.startsWith("SELECT")) {
             selectValues();
         }
     }
 
-    private void deleteValues() {
 
+    private void insertValues(String request) {
+        String[] parts = request.split(",");
+        Map<String, Object> row3 = new HashMap<>();
+
+        for(String part: parts) {
+            String key = part.substring(0, part.indexOf("="));
+            String value = part.substring(part.indexOf("=")+1);
+            row3.put(key, value);
+        }
+        table.getData().add(row3);
+        System.out.println(table.getData());
+        }
+    private void deleteValues(String request) {
+        String[] parts = request.split(",");
+        Map<String, Object> row = new HashMap<>();
+
+        for(String part: parts) {
+            String key = part.substring(0, part.indexOf("="));
+            String value = part.substring(part.indexOf("=")+1);
+            row.put(key, value);
+        }
+        table.getData().remove(row);
+        System.out.println(table.getData());
     }
 
     private void selectValues() {
@@ -48,12 +72,6 @@ public class JavaSchoolStarter {
     private void updateValues() {
 
     }
-
-    private void insertValues(String request) {
-        Map<String, Object> row3 = new HashMap<>();
-        request.split();
-
-
     }
-}
+
 

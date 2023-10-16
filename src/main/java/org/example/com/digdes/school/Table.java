@@ -12,14 +12,14 @@ public class Table {
        Map<String, Object> row1 = new HashMap<>();
        row1.put("id",1);
        row1.put("lastName","Сидоров");
-       row1.put("age",18);
+       row1.put("age",48);
        row1.put("cost",5.4);
        row1.put("active", true);
 
        Map<String, Object> row2 = new HashMap<>();
        row2.put("id",2);
        row2.put("lastName","Михайлин");
-       row2.put("age",8);
+       row2.put("age",13);
        row2.put("cost",5.9);
        row2.put("active", false);
        data.add(row1);

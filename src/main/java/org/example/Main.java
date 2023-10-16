@@ -9,13 +9,15 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws Exception {
         JavaSchoolStarter starter = new JavaSchoolStarter();
-        List<Map<String,Object>> result1 = starter.execute("INSERT VALUES " +
-                "'lastName' = 'Федоров' , " +
-                "'id'= 3, 'age' = 40, 'active' = true");
-
-
-//        System.out.println(starter.execute("INSERT"));
-
+        List<Map<String,Object>> result3 = starter.execute("INSERT VALUES " +
+                "'lastName' = 'Гайсин' , " +
+                "'id'= 5, 'age' = 15, 'active' = true");
+        List<Map<String,Object>> result2 = starter.execute("INSERT VALUES " +
+                "'lastName' = 'сайсин' , " +
+                "'id'= 4, 'age' = 5, 'active' = true");
+        List<Map<String,Object>> result1 = starter.execute("DELETE VALUES " +
+                "'lastName' = 'сайсин' , " +
+                "'id'= 4, 'age' = 5, 'active' = true");
 
 
     }
