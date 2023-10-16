@@ -13,16 +13,21 @@ public class JavaSchoolStarter {
     }
 
     public List<Map<String, Object>> execute(String request) throws Exception {
-
         readOrder(request);
-
-
         return table.getData();
+    }
+
+    private String updateRequest(String request) {
+        return request.
+                replace(" ", "").
+                substring(13).
+                replace("'", "");
     }
 
     private void readOrder(String request) {
         if (request.startsWith("INSERT")) {
-            insertValues(request);
+            String updatedRequest = updateRequest(request);
+            insertValues(updatedRequest);
         } else if (request.startsWith("UPDATE")) {
             updateValues();
         } else if (request.startsWith("DELETE")) {
@@ -46,10 +51,8 @@ public class JavaSchoolStarter {
 
     private void insertValues(String request) {
         Map<String, Object> row3 = new HashMap<>();
-        Pattern pattern = Pattern.compile("\"([^\"]*)\"");
-        Matcher matcher = pattern.matcher(request);
+        request.split();
 
-        table.getData().add(row3);
 
     }
 }

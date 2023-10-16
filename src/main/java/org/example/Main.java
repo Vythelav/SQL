@@ -11,7 +11,7 @@ public class Main {
         JavaSchoolStarter starter = new JavaSchoolStarter();
         List<Map<String,Object>> result1 = starter.execute("INSERT VALUES " +
                 "'lastName' = 'Федоров' , " +
-                "'id'=3, 'age'=40, 'active'=true");
+                "'id'= 3, 'age' = 40, 'active' = true");
 
 
 //        System.out.println(starter.execute("INSERT"));
