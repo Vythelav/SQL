@@ -12,9 +12,6 @@ public class Main {
         List<Map<String,Object>> result3 = starter.execute("INSERT VALUES " +
                 "'lastName' = 'Гайсин' , " +
                 "'id'= 5, 'age' = 15, 'active' = true");
-        List<Map<String,Object>> result2 = starter.execute("INSERT VALUES " +
-                "'lastName' = 'сайсин' , " +
-                "'id'= 4, 'age' = 5, 'active' = true");
         List<Map<String,Object>> result1 = starter.execute("DELETE VALUES " +
                 "'lastName' = 'сайсин' , " +
                 "'id'= 4, 'age' = 5, 'active' = true");
