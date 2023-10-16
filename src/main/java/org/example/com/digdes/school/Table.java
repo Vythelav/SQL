@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class Table {
-    List<Map<String, Object>> data = new ArrayList<>();
-    public void creetTable(){
+    private static List<Map<String, Object>> data = new ArrayList<>();
+
+    static {
        Map<String, Object> row1 = new HashMap<>();
        row1.put("id",1);
        row1.put("lastName","Сидоров");
@@ -27,9 +28,5 @@ public class Table {
 
     public List<Map<String, Object>> getData() {
         return data;
-    }
-
-    public void setData(List<Map<String, Object>> data) {
-        this.data = data;
     }
 }
